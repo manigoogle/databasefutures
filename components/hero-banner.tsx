@@ -198,7 +198,7 @@ export function HeroBanner() {
   }, [])
 
   return (
-    <div ref={containerRef} className="relative overflow-hidden bg-[#050b1f] py-36 px-4">
+    <div ref={containerRef} className="relative overflow-hidden bg-[#050b1f] py-24 px-4">
       {/* Grid animation canvas */}
       <canvas ref={canvasRef} className="absolute inset-0 w-full h-full" aria-hidden="true" />
 

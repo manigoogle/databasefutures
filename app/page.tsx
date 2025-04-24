@@ -48,7 +48,7 @@ export default function Home() {
     <main className="min-h-screen bg-[#050b1f]">
       <HeroBanner />
 
-      <div className="max-w-6xl mx-auto px-6 py-24">
+      <div className="max-w-6xl mx-auto px-6 py-12">
         {/* Updated to include the total count */}
         <div className="mb-8 text-blue-800/60 text-lg font-medium">
           <p>Future possibilities ({ideas.length})</p>
