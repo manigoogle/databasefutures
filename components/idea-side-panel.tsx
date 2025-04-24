@@ -89,11 +89,11 @@ export function IdeaSidePanel({ idea, isOpen, onClose, onNext, onPrevious }: Ide
                     <ChevronRight className="h-4 w-4 ml-1" />
                   </Button>
                 </div>
-                <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-900/30 border border-blue-800/30 text-blue-400 text-xs font-medium">
-                  Idea #{idea.id}
-                </div>
               </div>
 
+              <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-900/30 border border-blue-800/30 text-blue-400 text-xs font-medium mb-2">
+                Idea #{idea.id}
+              </div>
               <h2 className="text-2xl font-bold text-white mb-6 leading-tight">{idea.name}</h2>
 
               <div className="space-y-8">
