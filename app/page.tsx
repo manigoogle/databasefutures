@@ -14,7 +14,6 @@ export default async function HomePage() {
                    relative overflow-hidden -translate-y-[75px]"
       >
         {/* Inner container for text content, centered */}
-        {/* Adjusted margin: -125px + 90px = -35px */}
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center mt-[-35px] md:mt-[-35px]">
           <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold text-brand-heading mb-10 md:mb-12 balance-text">
             Cloud technologies I thought I understood
@@ -25,10 +24,9 @@ export default async function HomePage() {
               <strong className="font-semibold text-brand-heading align-middle">Why I write this:</strong>
             </p>
             <p className="font-sans text-base md:text-lg text-brand-text leading-relaxed mb-4">
-              Every Friday, I try to make sense of cloud technologies—especially the ones that touch databases, my core
-              product area. As a designer, I learn best by explaining things simply, like I would to a curious friend.
-              That’s what these notes are: a personal learning journey, shared out loud. I hope this sparks discussions
-              within the team about our product and technology.
+              Every Friday, I share what I’ve been learning about cloud—especially databases. Writing helps me think
+              more clearly, and sharing it is my way of helping us all learn a little more, together. I hope this sparks
+              discussions within the team about our product and technology.
             </p>
             <p className="font-sans text-sm md:text-base text-brand-mutedText text-right">— Mani HK</p>
           </div>
@@ -36,8 +34,8 @@ export default async function HomePage() {
       </section>
 
       {/* Blog Posts Section - starts with a solid white background */}
-      {/* This section's position should remain unaffected by the hero's transform */}
-      <section className="bg-brand-backgroundFrom py-12 md:py-20">
+      {/* Added negative top margin to reduce space from hero */}
+      <section className="bg-brand-backgroundFrom py-12 md:py-20 mt-[-150px] relative z-10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             {posts.length > 0 ? (
