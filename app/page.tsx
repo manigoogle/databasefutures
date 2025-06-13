@@ -25,7 +25,8 @@ export default async function HomePage() {
             </p>
             <p className="font-sans text-base md:text-lg text-brand-text leading-relaxed mb-4">
               Every Friday, I share what I’ve been learning about cloud—especially databases. Writing helps me think
-              more clearly, and sharing it is my way of helping us all learn a little more, together. 
+              more clearly, and sharing it is my way of helping us all learn a little more, together.
+            </p>
             <p className="font-sans text-sm md:text-base text-brand-mutedText text-right">— Mani HK</p>
           </div>
         </div>
