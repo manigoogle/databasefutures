@@ -6,16 +6,16 @@ export default async function HomePage() {
 
   return (
     <>
-      {/* Full-width Hero Section */}
+      {/* Full-width Hero Section - position remains translated up */}
       <section
         id="home-hero-banner"
         className="min-h-screen w-full flex flex-col justify-center 
                    bg-gradient-to-br from-brand-geminiGradientStart via-brand-geminiGradientVia to-brand-geminiGradientEnd
-                   relative overflow-hidden -translate-y-[75px]" // Added -translate-y-[75px]
+                   relative overflow-hidden -translate-y-[75px]"
       >
         {/* Inner container for text content, centered */}
-        {/* Adjusted margin: -200px + 75px = -125px */}
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center mt-[-125px] md:mt-[-125px]">
+        {/* Adjusted margin: -125px + 90px = -35px */}
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center mt-[-35px] md:mt-[-35px]">
           <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold text-brand-heading mb-10 md:mb-12 balance-text">
             Cloud technologies I thought I understood
           </h1>
