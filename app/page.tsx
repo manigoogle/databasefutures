@@ -14,7 +14,7 @@ export default async function HomePage() {
                  relative overflow-hidden" // overflow-hidden to contain negative margins if any
       >
         {/* Inner container for text content, centered */}
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center mt-[-150px] md:mt-[-150px]">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center mt-[-200px] md:mt-[-200px]">
           <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold text-brand-heading mb-10 md:mb-12 balance-text">
             Cloud technologies I thought I understood
           </h1>
