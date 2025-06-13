@@ -6,14 +6,14 @@ export default async function HomePage() {
 
   return (
     <>
-      {/* Full-width Hero Section - Outermost element is full width */}
+      {/* Full-width Hero Section - This will now be truly full-width */}
       <section
         id="home-hero-banner"
         className="min-h-screen w-full flex flex-col justify-center 
                    bg-gradient-to-br from-brand-geminiGradientStart via-brand-geminiGradientVia to-brand-geminiGradientEnd
-                   relative overflow-hidden" // overflow-hidden to contain negative margins if any
+                   relative overflow-hidden"
       >
-        {/* Inner container for text content, centered */}
+        {/* Inner container for text content, which remains centered */}
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center mt-[-100px] md:mt-[-100px]">
           <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold text-brand-heading mb-10 md:mb-12 balance-text">
             Cloud technologies I thought I understood
@@ -34,9 +34,8 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Blog Posts Section - starts with a solid white background */}
+      {/* Blog Posts Section - This now has its own container and padding */}
       <section className="bg-brand-backgroundFrom py-12 md:py-20">
-        {/* Container for blog post list, centered */}
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             {posts.length > 0 ? (

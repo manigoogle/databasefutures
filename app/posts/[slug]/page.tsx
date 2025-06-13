@@ -99,29 +99,31 @@ export default async function PostPage({ params }: Props) {
   const headerHeightApproximation = "pt-[56px] sm:pt-[64px]"
 
   return (
-    <div className={`max-w-2xl lg:max-w-3xl mx-auto ${headerHeightApproximation} pb-12 md:pb-20`}>
-      <article>
-        <header className="mb-10 md:mb-14">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-serif text-brand-heading mb-6 leading-tight balance-text">
-            {post.title}
-          </h1>
-          <div className="flex flex-wrap items-center text-sm text-brand-mutedText space-x-4 sm:space-x-6 font-sans">
-            <div className="flex items-center gap-1.5">
-              <CalendarDays size={14} />
-              <time dateTime={post.date}>
-                {new Date(post.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
-              </time>
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className={`max-w-2xl lg:max-w-3xl mx-auto ${headerHeightApproximation} pb-12 md:pb-20`}>
+        <article>
+          <header className="mb-10 md:mb-14">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-serif text-brand-heading mb-6 leading-tight balance-text">
+              {post.title}
+            </h1>
+            <div className="flex flex-wrap items-center text-sm text-brand-mutedText space-x-4 sm:space-x-6 font-sans">
+              <div className="flex items-center gap-1.5">
+                <CalendarDays size={14} />
+                <time dateTime={post.date}>
+                  {new Date(post.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+                </time>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <span>By {post.author.name}</span>
+              </div>
             </div>
-            <div className="flex items-center gap-1.5">
-              <span>By {post.author.name}</span>
-            </div>
-          </div>
-        </header>
+          </header>
 
-        <div className="prose prose-lg max-w-none" dangerouslySetInnerHTML={{ __html: post.content }} />
-      </article>
-      <ArticleNavigationBottom adjacentPosts={adjacentPosts} />
-      <RelatedPostsSection relatedPosts={relatedPosts} />
+          <div className="prose prose-lg max-w-none" dangerouslySetInnerHTML={{ __html: post.content }} />
+        </article>
+        <ArticleNavigationBottom adjacentPosts={adjacentPosts} />
+        <RelatedPostsSection relatedPosts={relatedPosts} />
+      </div>
     </div>
   )
 }
