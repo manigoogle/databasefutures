@@ -2,99 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
-
 @layer base {
   :root {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
-
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
-
-    --primary: 252 87% 67%;
-    --primary-foreground: 0 0% 98%;
-
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
+    --background: 0 0% 100%;
+    --foreground: 224 71.4% 4.1%;
+    --card: 0 0% 100%;
+    --card-foreground: 224 71.4% 4.1%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71.4% 4.1%;
+    --primary: 224 71.4% 4.1%;
+    --primary-foreground: 210 20% 98%;
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 224 71.4% 4.1%;
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+    --accent: 224 71.4% 4.1%;
+    --accent-foreground: 210 20% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 224 71.4% 4.1%;
+    --radius: 0.25rem; /* Sharper radius for classic feel */
   }
-  .dark {
-    --background: 222 47% 5%;
-    --foreground: 210 40% 98%;
 
-    --card: 222 47% 7%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222 47% 5%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 217 91% 60%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 217 33% 17%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217 33% 17%;
-    --muted-foreground: 215 20% 65%;
-
-    --accent: 217 33% 17%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217 33% 17%;
-    --input: 217 33% 17%;
-    --ring: 224 76% 48%;
-  }
-}
-
-.grid-bg {
-  background-size: 30px 30px;
-  background-image: radial-gradient(circle, rgba(64, 92, 219, 0.1) 1px, transparent 1px),
-    radial-gradient(circle, rgba(64, 92, 219, 0.1) 1px, transparent 1px);
-  background-position: 0 0, 15px 15px;
-}
-
-.glow {
-  position: absolute;
-  width: 600px;
-  height: 600px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(56, 91, 218, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
-  filter: blur(50px);
-  z-index: 0;
-}
-
-.glow-cyan {
-  background: radial-gradient(circle, rgba(6, 182, 212, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
   body {
-    @apply bg-background text-foreground;
+    background-image: linear-gradient(
+      to bottom,
+      theme("colors.brand.backgroundFrom"),
+      theme("colors.brand.backgroundTo")
+    );
+    color: theme("colors.brand.text");
+    font-family: theme("fontFamily.sans"); /* Default to sans for UI elements */
+    line-height: theme("lineHeight.normal");
+    font-feature-settings: "rlig" 1, "calt" 1, "liga" 1, "kern" 1; /* Added kerning */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+    font-size: theme("fontSize.base"); /* Apply base font size to body */
+  }
+
+  /* Global heading styles (if not overridden by prose or specific components) */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: theme("fontFamily.serif"); /* Default headings to serif */
+    color: theme("colors.brand.heading");
+    font-weight: 700;
+    line-height: theme("lineHeight.tighter");
+    letter-spacing: -0.025em;
+  }
+
+  /* Improve focus states for accessibility */
+  *:focus-visible {
+    outline: 2px solid theme("colors.brand.accent");
+    outline-offset: 2px;
+    border-radius: var(--radius);
+  }
+
+  .balance-text {
+    text-wrap: balance;
   }
 }

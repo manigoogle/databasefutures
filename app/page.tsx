@@ -1,93 +1,56 @@
-"use client"
+import PostCard from "@/app/components/post-card"
+import { getPosts } from "@/lib/posts"
 
-import { useState, useEffect } from "react"
-import { HeroBanner } from "@/components/hero-banner"
-import { IdeaCard } from "@/components/idea-card"
-import { IdeaSidePanel } from "@/components/idea-side-panel"
-import { Footer } from "@/components/footer"
-import { Pagination } from "@/components/pagination"
-import { ideas } from "@/data/ideas-direct"
-import type { Idea } from "@/types/idea"
-
-export default function Home() {
-  const [ideasLoaded, setIdeasLoaded] = useState<Idea[]>([])
-  const [currentPage, setCurrentPage] = useState(1)
-  const ideasPerPage = 10
-
-  useEffect(() => {
-    // Set the ideas to state after component mounts
-    setIdeasLoaded(ideas)
-  }, [])
-
-  const [selectedIdea, setSelectedIdea] = useState<Idea | null>(null)
-  const [isOpen, setIsOpen] = useState(false)
-
-  const handleCardClick = (idea: Idea) => {
-    setSelectedIdea(idea)
-    setIsOpen(true)
-  }
-
-  const handleClose = () => {
-    setIsOpen(false)
-  }
-
-  const handleNext = () => {
-    if (selectedIdea) {
-      const currentIndex = ideasLoaded.findIndex((idea) => idea.id === selectedIdea.id)
-      const nextIndex = (currentIndex + 1) % ideasLoaded.length
-      setSelectedIdea(ideasLoaded[nextIndex])
-    }
-  }
-
-  const handlePrevious = () => {
-    if (selectedIdea) {
-      const currentIndex = ideasLoaded.findIndex((idea) => idea.id === selectedIdea.id)
-      const previousIndex = (currentIndex - 1 + ideasLoaded.length) % ideasLoaded.length
-      setSelectedIdea(ideasLoaded[previousIndex])
-    }
-  }
-
-  // Calculate pagination
-  const totalPages = Math.ceil(ideasLoaded.length / ideasPerPage)
-  const indexOfLastIdea = currentPage * ideasPerPage
-  const indexOfFirstIdea = indexOfLastIdea - ideasPerPage
-  const currentIdeas = ideasLoaded.slice(indexOfFirstIdea, indexOfLastIdea)
-
-  const handlePageChange = (pageNumber: number) => {
-    setCurrentPage(pageNumber)
-    // Scroll to top when changing pages
-    window.scrollTo({ top: 0, behavior: "smooth" })
-  }
+export default async function HomePage() {
+  const posts = await getPosts()
 
   return (
-    <main className="min-h-screen bg-[#050b1f]">
-      <HeroBanner />
-
-      <div className="max-w-6xl mx-auto px-6 py-12">
-        {/* Updated text from "Future possibilities" to "Total ideas" */}
-        <div className="mb-8 text-blue-800/60 text-lg font-medium">
-          <p>Total ideas ({ideas.length})</p>
+    <>
+      {/* Full-width Hero Section - Outermost element is full width */}
+      <section
+        id="home-hero-banner"
+        className="min-h-screen w-full flex flex-col justify-center 
+                   bg-gradient-to-br from-brand-geminiGradientStart via-brand-geminiGradientVia to-brand-geminiGradientEnd
+                   relative overflow-hidden" // overflow-hidden to contain negative margins if any
+      >
+        {/* Inner container for text content, centered */}
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center mt-[-100px] md:mt-[-100px]">
+          <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold text-brand-heading mb-10 md:mb-12 balance-text">
+            Cloud technologies I thought I understood
+          </h1>
+          <div className="max-w-2xl mx-auto text-left">
+            <p className="font-sans text-base md:text-lg text-brand-text mb-2">
+              <span className="text-2xl mr-2 align-middle">📝</span>
+              <strong className="font-semibold text-brand-heading align-middle">Why I write this:</strong>
+            </p>
+            <p className="font-sans text-base md:text-lg text-brand-text leading-relaxed mb-4">
+              Every Friday, I try to make sense of cloud technologies—especially the ones that touch databases, my core
+              product area. As a designer, I learn best by explaining things simply, like I would to a curious friend.
+              That’s what these notes are: a personal learning journey, shared out loud. I hope this sparks discussions
+              within the team about our product and technology.
+            </p>
+            <p className="font-sans text-sm md:text-base text-brand-mutedText text-right">— Mani HK</p>
+          </div>
         </div>
+      </section>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {currentIdeas.map((idea, index) => (
-            <IdeaCard key={idea.id} idea={idea} onClick={handleCardClick} index={index} />
-          ))}
+      {/* Blog Posts Section - starts with a solid white background */}
+      <section className="bg-brand-backgroundFrom py-12 md:py-20">
+        {/* Container for blog post list, centered */}
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            {posts.length > 0 ? (
+              <div className="space-y-10 md:space-y-16">
+                {posts.map((post) => (
+                  <PostCard key={post.slug} post={post} />
+                ))}
+              </div>
+            ) : (
+              <p className="text-center text-brand-mutedText font-sans">No articles published yet. Check back soon!</p>
+            )}
+          </div>
         </div>
-
-        {/* Pagination component */}
-        <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={handlePageChange} />
-      </div>
-
-      <IdeaSidePanel
-        idea={selectedIdea}
-        isOpen={isOpen}
-        onClose={handleClose}
-        onNext={handleNext}
-        onPrevious={handlePrevious}
-      />
-
-      <Footer />
-    </main>
+      </section>
+    </>
   )
 }
