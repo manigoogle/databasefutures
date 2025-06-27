@@ -10,7 +10,7 @@ export default async function HomePage() {
       <section
         id="home-hero-banner"
         className="min-h-screen w-full flex flex-col justify-center 
-                   bg-gradient-to-br from-brand-geminiGradientStart via-brand-geminiGradientVia to-brand-geminiGradientEnd
+                   bg-gradient-to-br from-brand-yellowGradientStart via-brand-yellowGradientVia via-brand-yellowGradientMid to-brand-yellowGradientEnd
                    relative overflow-hidden -translate-y-[75px]"
       >
         {/* Inner container for text content, centered */}

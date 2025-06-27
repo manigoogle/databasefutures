@@ -59,9 +59,10 @@ const config = {
         brand: {
           backgroundFrom: "#FFFFFF", // Solid white for content background
           backgroundTo: "#F8FAFC", // Only used for body gradient if needed, content is solid white
-          geminiGradientStart: "#F3E8FF",
-          geminiGradientVia: "#FCE7F3",
-          geminiGradientEnd: "#EFF6FF",
+          yellowGradientStart: "#FFF8DC", // Cornsilk - warm cream
+          yellowGradientVia: "#FFE4B5", // Moccasin - light peach-yellow
+          yellowGradientMid: "#FFD700", // Gold - vibrant yellow
+          yellowGradientEnd: "#FFC107", // Amber - deeper yellow
           text: "#1E293B",
           heading: "#0F172A",
           mutedText: "#475569",
@@ -69,7 +70,6 @@ const config = {
           accentHover: "#334155",
           border: "#CBD5E1",
           lightBorder: "#E2E8F0",
-          // headerHomeScrollBg removed, all sticky headers use gradient
         },
       },
       fontFamily: {
