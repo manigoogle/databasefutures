@@ -16,7 +16,7 @@ export default async function HomePage() {
         {/* Inner container for text content, centered */}
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center mt-[-35px] md:mt-[-35px]">
           <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold text-brand-heading mb-10 md:mb-12 balance-text">
-            Cloud technologies I thought I understood
+            Cloud Tech I Thought I Understood
           </h1>
           <div className="max-w-2xl mx-auto text-left">
             <p className="font-sans text-base md:text-lg text-brand-text mb-2">
