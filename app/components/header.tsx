@@ -80,7 +80,7 @@ export default function Header() {
             <div style={{ width: 22 }} /> // Placeholder for spacing on homepage to keep title centered
           )}
           <Link href="/" className={`${titleBaseClasses} ${titleDynamicClasses} mx-auto px-2`}>
-            Cloud technologies I thought I understood
+            Cloud Tech I Thought I Understood
           </Link>
           <div style={{ width: 22 }} /> {/* Placeholder for spacing to balance HomeIcon/empty space */}
         </div>
