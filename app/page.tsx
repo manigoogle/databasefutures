@@ -18,16 +18,16 @@ export default async function HomePage() {
           <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold text-brand-heading mb-10 md:mb-12 balance-text">
             Cloud Tech I Thought I Understood
           </h1>
-          <div className="max-w-2xl mx-auto text-left">
+          <div className="max-w-2xl mx-auto text-center">
             <p className="font-sans text-base md:text-lg text-brand-text mb-2">
               <span className="text-2xl mr-2 align-middle">📝</span>
               <strong className="font-semibold text-brand-heading align-middle">Why I write this:</strong>
             </p>
             <p className="font-sans text-base md:text-lg text-brand-text leading-relaxed mb-4">
-              Every Friday, I share what I’ve been learning about cloud—especially databases. Writing helps me think
+              Every Friday, I share what I've been learning about cloud—especially databases. Writing helps me think
               more clearly, and sharing it is my way of helping us all learn a little more, together.
             </p>
-            <p className="font-sans text-sm md:text-base text-brand-mutedText text-right">— Mani HK</p>
+            <p className="font-sans text-sm md:text-base text-brand-mutedText">— Mani HK</p>
           </div>
         </div>
       </section>
