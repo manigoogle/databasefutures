@@ -63,15 +63,15 @@ const config = {
           heroGradientStart: "#FEFEFE", // Almost white with warm undertone
           heroGradientVia: "#FAFAFA", // Very light gray
           heroGradientEnd: "#F8F9FA", // Subtle cool gray
-          // Yellow accents - used sparingly for highlights
-          yellowAccent: "#FFD700", // Gold for links and highlights
-          yellowAccentHover: "#FFC107", // Amber for hover states
-          yellowAccentLight: "#FFF8DC", // Very light cream for subtle backgrounds
+          // Orange accents - used sparingly for highlights
+          orangeAccent: "#FFC107", // Warm orange for links and highlights
+          orangeAccentHover: "#FF9800", // Deeper orange for hover states
+          orangeAccentLight: "#FFF8E1", // Very light orange for subtle backgrounds
           text: "#1E293B", // Dark slate for body text
           heading: "#0F172A", // Almost black for headings
           mutedText: "#64748B", // Medium gray for secondary text
-          accent: "#FFD700", // Yellow accent for links
-          accentHover: "#FFC107", // Darker yellow for hover
+          accent: "#FFC107", // Orange accent for links
+          accentHover: "#FF9800", // Darker orange for hover
           border: "#E2E8F0", // Light gray borders
           lightBorder: "#F1F5F9", // Very light borders
         },
