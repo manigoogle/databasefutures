@@ -57,19 +57,23 @@ const config = {
           foreground: "hsl(var(--card-foreground))",
         },
         brand: {
-          backgroundFrom: "#FFFFFF", // Solid white for content background
-          backgroundTo: "#F8FAFC", // Only used for body gradient if needed, content is solid white
-          yellowGradientStart: "#FFF8DC", // Cornsilk - warm cream
-          yellowGradientVia: "#FFE4B5", // Moccasin - light peach-yellow
-          yellowGradientMid: "#FFD700", // Gold - vibrant yellow
-          yellowGradientEnd: "#FFC107", // Amber - deeper yellow
-          text: "#1E293B",
-          heading: "#0F172A",
-          mutedText: "#475569",
-          accent: "#0F172A",
-          accentHover: "#334155",
-          border: "#CBD5E1",
-          lightBorder: "#E2E8F0",
+          backgroundFrom: "#FFFFFF", // Pure white
+          backgroundTo: "#FAFAFA", // Very subtle gray
+          // Refined neutral gradient - barely perceptible
+          heroGradientStart: "#FEFEFE", // Almost white with warm undertone
+          heroGradientVia: "#FAFAFA", // Very light gray
+          heroGradientEnd: "#F8F9FA", // Subtle cool gray
+          // Yellow accents - used sparingly for highlights
+          yellowAccent: "#FFD700", // Gold for links and highlights
+          yellowAccentHover: "#FFC107", // Amber for hover states
+          yellowAccentLight: "#FFF8DC", // Very light cream for subtle backgrounds
+          text: "#1E293B", // Dark slate for body text
+          heading: "#0F172A", // Almost black for headings
+          mutedText: "#64748B", // Medium gray for secondary text
+          accent: "#FFD700", // Yellow accent for links
+          accentHover: "#FFC107", // Darker yellow for hover
+          border: "#E2E8F0", // Light gray borders
+          lightBorder: "#F1F5F9", // Very light borders
         },
       },
       fontFamily: {

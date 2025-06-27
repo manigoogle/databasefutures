@@ -37,7 +37,7 @@ export default function Header() {
 
   const headerBaseClasses = "sticky top-0 z-50 transition-all duration-300 ease-in-out"
   const headerBackgroundClasses =
-    "bg-gradient-to-r from-brand-yellowGradientStart via-brand-yellowGradientVia to-brand-yellowGradientEnd shadow-sm"
+    "bg-gradient-to-r from-brand-heroGradientStart via-brand-heroGradientVia to-brand-heroGradientEnd shadow-sm backdrop-blur-sm"
   let headerVisibilityClasses = ""
 
   if (isHomePage) {

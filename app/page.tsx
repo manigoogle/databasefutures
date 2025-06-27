@@ -6,11 +6,11 @@ export default async function HomePage() {
 
   return (
     <>
-      {/* Full-width Hero Section - position remains translated up */}
+      {/* Full-width Hero Section with subtle neutral gradient */}
       <section
         id="home-hero-banner"
         className="min-h-screen w-full flex flex-col justify-center 
-                   bg-gradient-to-br from-brand-yellowGradientStart via-brand-yellowGradientVia via-brand-yellowGradientMid to-brand-yellowGradientEnd
+                   bg-gradient-to-br from-brand-heroGradientStart via-brand-heroGradientVia to-brand-heroGradientEnd
                    relative overflow-hidden -translate-y-[75px]"
       >
         {/* Inner container for text content, centered */}
