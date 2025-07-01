@@ -6,281 +6,305 @@ export default async function HomePage() {
 
   return (
     <>
-      {/* Full-width Hero Section with light grey gradient and line animations */}
+      {/* Full-width Hero Section with light grey gradient and fractal/tesseract animations */}
       <section
         id="home-hero-banner"
         className="min-h-screen w-full flex flex-col justify-center 
              bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200
              relative overflow-hidden -translate-y-[75px]"
       >
-        {/* Animated Line Network Background */}
+        {/* Animated Fractal and Tesseract Background */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {/* SVG Line Network */}
+          {/* SVG Fractal and Tesseract Geometry */}
           <svg
             className="absolute inset-0 w-full h-full"
             viewBox="0 0 1200 800"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            {/* Network nodes (dots) */}
-            <circle
-              cx="100"
-              cy="150"
-              r="3"
-              fill="#9CA3AF"
-              className="animate-pulse-node"
-              style={{ animationDelay: "0s" }}
-            />
-            <circle
-              cx="300"
-              cy="100"
-              r="2"
-              fill="#6B7280"
-              className="animate-pulse-node"
-              style={{ animationDelay: "1s" }}
-            />
-            <circle
-              cx="500"
-              cy="200"
-              r="3"
-              fill="#9CA3AF"
-              className="animate-pulse-node"
-              style={{ animationDelay: "2s" }}
-            />
-            <circle
-              cx="700"
-              cy="120"
-              r="2"
-              fill="#6B7280"
-              className="animate-pulse-node"
-              style={{ animationDelay: "3s" }}
-            />
-            <circle
-              cx="900"
-              cy="180"
-              r="3"
-              fill="#9CA3AF"
-              className="animate-pulse-node"
-              style={{ animationDelay: "4s" }}
-            />
-            <circle
-              cx="1100"
-              cy="140"
-              r="2"
-              fill="#6B7280"
-              className="animate-pulse-node"
-              style={{ animationDelay: "5s" }}
-            />
+            {/* Tesseract (4D cube projection) - Main structure */}
+            <g className="animate-tesseract-rotate" style={{ transformOrigin: "600px 400px" }}>
+              {/* Outer cube */}
+              <path
+                d="M400,200 L600,200 L600,400 L400,400 Z"
+                stroke="#9CA3AF"
+                strokeWidth="1.5"
+                fill="none"
+                className="animate-tesseract-edge"
+                style={{ animationDelay: "0s" }}
+              />
+              {/* Inner cube */}
+              <path
+                d="M500,300 L700,300 L700,500 L500,500 Z"
+                stroke="#6B7280"
+                strokeWidth="1.5"
+                fill="none"
+                className="animate-tesseract-edge"
+                style={{ animationDelay: "0.5s" }}
+              />
+              {/* Connecting edges (4D projection) */}
+              <path
+                d="M400,200 L500,300"
+                stroke="#D1D5DB"
+                strokeWidth="1"
+                fill="none"
+                className="animate-tesseract-connection"
+                style={{ animationDelay: "1s" }}
+              />
+              <path
+                d="M600,200 L700,300"
+                stroke="#D1D5DB"
+                strokeWidth="1"
+                fill="none"
+                className="animate-tesseract-connection"
+                style={{ animationDelay: "1.2s" }}
+              />
+              <path
+                d="M600,400 L700,500"
+                stroke="#D1D5DB"
+                strokeWidth="1"
+                fill="none"
+                className="animate-tesseract-connection"
+                style={{ animationDelay: "1.4s" }}
+              />
+              <path
+                d="M400,400 L500,500"
+                stroke="#D1D5DB"
+                strokeWidth="1"
+                fill="none"
+                className="animate-tesseract-connection"
+                style={{ animationDelay: "1.6s" }}
+              />
+            </g>
 
-            <circle
-              cx="150"
-              cy="400"
-              r="2"
-              fill="#6B7280"
-              className="animate-pulse-node"
-              style={{ animationDelay: "1.5s" }}
-            />
-            <circle
-              cx="350"
-              cy="450"
-              r="3"
-              fill="#9CA3AF"
-              className="animate-pulse-node"
-              style={{ animationDelay: "2.5s" }}
-            />
-            <circle
-              cx="550"
-              cy="380"
-              r="2"
-              fill="#6B7280"
-              className="animate-pulse-node"
-              style={{ animationDelay: "3.5s" }}
-            />
-            <circle
-              cx="750"
-              cy="420"
-              r="3"
-              fill="#9CA3AF"
-              className="animate-pulse-node"
-              style={{ animationDelay: "4.5s" }}
-            />
-            <circle
-              cx="950"
-              cy="400"
-              r="2"
-              fill="#6B7280"
-              className="animate-pulse-node"
-              style={{ animationDelay: "5.5s" }}
-            />
+            {/* Fractal Tree Structure - Left side */}
+            <g className="animate-fractal-grow" style={{ transformOrigin: "200px 600px" }}>
+              {/* Main trunk */}
+              <path
+                d="M200,700 L200,600"
+                stroke="#9CA3AF"
+                strokeWidth="3"
+                fill="none"
+                className="animate-fractal-branch"
+                style={{ animationDelay: "0s" }}
+              />
+              {/* First level branches */}
+              <path
+                d="M200,600 L150,550"
+                stroke="#9CA3AF"
+                strokeWidth="2"
+                fill="none"
+                className="animate-fractal-branch"
+                style={{ animationDelay: "0.5s" }}
+              />
+              <path
+                d="M200,600 L250,550"
+                stroke="#9CA3AF"
+                strokeWidth="2"
+                fill="none"
+                className="animate-fractal-branch"
+                style={{ animationDelay: "0.7s" }}
+              />
+              {/* Second level branches */}
+              <path
+                d="M150,550 L125,525"
+                stroke="#B3B8C2"
+                strokeWidth="1.5"
+                fill="none"
+                className="animate-fractal-branch"
+                style={{ animationDelay: "1s" }}
+              />
+              <path
+                d="M150,550 L175,525"
+                stroke="#B3B8C2"
+                strokeWidth="1.5"
+                fill="none"
+                className="animate-fractal-branch"
+                style={{ animationDelay: "1.2s" }}
+              />
+              <path
+                d="M250,550 L225,525"
+                stroke="#B3B8C2"
+                strokeWidth="1.5"
+                fill="none"
+                className="animate-fractal-branch"
+                style={{ animationDelay: "1.4s" }}
+              />
+              <path
+                d="M250,550 L275,525"
+                stroke="#B3B8C2"
+                strokeWidth="1.5"
+                fill="none"
+                className="animate-fractal-branch"
+                style={{ animationDelay: "1.6s" }}
+              />
+              {/* Third level branches */}
+              <path
+                d="M125,525 L112,512"
+                stroke="#D1D5DB"
+                strokeWidth="1"
+                fill="none"
+                className="animate-fractal-branch"
+                style={{ animationDelay: "2s" }}
+              />
+              <path
+                d="M125,525 L138,512"
+                stroke="#D1D5DB"
+                strokeWidth="1"
+                fill="none"
+                className="animate-fractal-branch"
+                style={{ animationDelay: "2.2s" }}
+              />
+              <path
+                d="M275,525 L262,512"
+                stroke="#D1D5DB"
+                strokeWidth="1"
+                fill="none"
+                className="animate-fractal-branch"
+                style={{ animationDelay: "2.4s" }}
+              />
+              <path
+                d="M275,525 L288,512"
+                stroke="#D1D5DB"
+                strokeWidth="1"
+                fill="none"
+                className="animate-fractal-branch"
+                style={{ animationDelay: "2.6s" }}
+              />
+            </g>
 
-            <circle
-              cx="200"
-              cy="650"
-              r="3"
-              fill="#9CA3AF"
-              className="animate-pulse-node"
-              style={{ animationDelay: "0.5s" }}
-            />
-            <circle
-              cx="400"
-              cy="700"
-              r="2"
-              fill="#6B7280"
-              className="animate-pulse-node"
-              style={{ animationDelay: "1.5s" }}
-            />
-            <circle
-              cx="600"
-              cy="620"
-              r="3"
-              fill="#9CA3AF"
-              className="animate-pulse-node"
-              style={{ animationDelay: "2.5s" }}
-            />
-            <circle
-              cx="800"
-              cy="680"
-              r="2"
-              fill="#6B7280"
-              className="animate-pulse-node"
-              style={{ animationDelay: "3.5s" }}
-            />
-            <circle
-              cx="1000"
-              cy="640"
-              r="3"
-              fill="#9CA3AF"
-              className="animate-pulse-node"
-              style={{ animationDelay: "4.5s" }}
-            />
+            {/* Sierpinski Triangle Fractal - Right side */}
+            <g className="animate-fractal-pulse" style={{ transformOrigin: "1000px 200px" }}>
+              {/* Level 1 - Main triangle */}
+              <path
+                d="M1000,100 L900,250 L1100,250 Z"
+                stroke="#9CA3AF"
+                strokeWidth="1.5"
+                fill="none"
+                className="animate-fractal-triangle"
+                style={{ animationDelay: "0s" }}
+              />
+              {/* Level 2 - Inner triangles */}
+              <path
+                d="M1000,100 L950,175 L1050,175 Z"
+                stroke="#B3B8C2"
+                strokeWidth="1"
+                fill="none"
+                className="animate-fractal-triangle"
+                style={{ animationDelay: "1s" }}
+              />
+              <path
+                d="M925,212.5 L875,250 L975,250 Z"
+                stroke="#B3B8C2"
+                strokeWidth="1"
+                fill="none"
+                className="animate-fractal-triangle"
+                style={{ animationDelay: "1.5s" }}
+              />
+              <path
+                d="M1025,212.5 L1125,250 L1075,250 Z"
+                stroke="#B3B8C2"
+                strokeWidth="1"
+                fill="none"
+                className="animate-fractal-triangle"
+                style={{ animationDelay: "2s" }}
+              />
+            </g>
 
-            {/* Connecting lines with draw animation */}
-            <path
-              d="M100,150 Q200,125 300,100"
-              stroke="#D1D5DB"
-              strokeWidth="1"
-              fill="none"
-              className="animate-draw-line"
-              style={{ animationDelay: "0s" }}
-            />
-            <path
-              d="M300,100 Q400,150 500,200"
-              stroke="#D1D5DB"
-              strokeWidth="1"
-              fill="none"
-              className="animate-draw-line"
-              style={{ animationDelay: "1s" }}
-            />
-            <path
-              d="M500,200 Q600,160 700,120"
-              stroke="#D1D5DB"
-              strokeWidth="1"
-              fill="none"
-              className="animate-draw-line"
-              style={{ animationDelay: "2s" }}
-            />
-            <path
-              d="M700,120 Q800,150 900,180"
-              stroke="#D1D5DB"
-              strokeWidth="1"
-              fill="none"
-              className="animate-draw-line"
-              style={{ animationDelay: "3s" }}
-            />
-            <path
-              d="M900,180 Q1000,160 1100,140"
-              stroke="#D1D5DB"
-              strokeWidth="1"
-              fill="none"
-              className="animate-draw-line"
-              style={{ animationDelay: "4s" }}
-            />
+            {/* Hypercube edges - Additional 4D geometry */}
+            <g className="animate-hypercube-morph" style={{ transformOrigin: "800px 600px" }}>
+              {/* Front face */}
+              <path
+                d="M750,550 L850,550 L850,650 L750,650 Z"
+                stroke="#9CA3AF"
+                strokeWidth="1"
+                fill="none"
+                className="animate-hypercube-face"
+                style={{ animationDelay: "0s" }}
+              />
+              {/* Back face */}
+              <path
+                d="M780,520 L880,520 L880,620 L780,620 Z"
+                stroke="#6B7280"
+                strokeWidth="1"
+                fill="none"
+                className="animate-hypercube-face"
+                style={{ animationDelay: "0.5s" }}
+              />
+              {/* Connecting edges */}
+              <path
+                d="M750,550 L780,520"
+                stroke="#D1D5DB"
+                strokeWidth="0.8"
+                fill="none"
+                className="animate-hypercube-edge"
+              />
+              <path
+                d="M850,550 L880,520"
+                stroke="#D1D5DB"
+                strokeWidth="0.8"
+                fill="none"
+                className="animate-hypercube-edge"
+              />
+              <path
+                d="M850,650 L880,620"
+                stroke="#D1D5DB"
+                strokeWidth="0.8"
+                fill="none"
+                className="animate-hypercube-edge"
+              />
+              <path
+                d="M750,650 L780,620"
+                stroke="#D1D5DB"
+                strokeWidth="0.8"
+                fill="none"
+                className="animate-hypercube-edge"
+              />
+            </g>
 
-            {/* Vertical connections */}
-            <path
-              d="M150,400 Q125,275 100,150"
-              stroke="#E5E7EB"
-              strokeWidth="1"
-              fill="none"
-              className="animate-draw-line"
-              style={{ animationDelay: "1.5s" }}
-            />
-            <path
-              d="M350,450 Q325,275 300,100"
-              stroke="#E5E7EB"
-              strokeWidth="1"
-              fill="none"
-              className="animate-draw-line"
-              style={{ animationDelay: "2.5s" }}
-            />
-            <path
-              d="M550,380 Q525,290 500,200"
-              stroke="#E5E7EB"
-              strokeWidth="1"
-              fill="none"
-              className="animate-draw-line"
-              style={{ animationDelay: "3.5s" }}
-            />
-            <path
-              d="M750,420 Q725,270 700,120"
-              stroke="#E5E7EB"
-              strokeWidth="1"
-              fill="none"
-              className="animate-draw-line"
-              style={{ animationDelay: "4.5s" }}
-            />
-
-            {/* Bottom row connections */}
-            <path
-              d="M200,650 Q300,675 400,700"
-              stroke="#D1D5DB"
-              strokeWidth="1"
-              fill="none"
-              className="animate-draw-line"
-              style={{ animationDelay: "5s" }}
-            />
-            <path
-              d="M400,700 Q500,660 600,620"
-              stroke="#D1D5DB"
-              strokeWidth="1"
-              fill="none"
-              className="animate-draw-line"
-              style={{ animationDelay: "6s" }}
-            />
-            <path
-              d="M600,620 Q700,650 800,680"
-              stroke="#D1D5DB"
-              strokeWidth="1"
-              fill="none"
-              className="animate-draw-line"
-              style={{ animationDelay: "7s" }}
-            />
-            <path
-              d="M800,680 Q900,660 1000,640"
-              stroke="#D1D5DB"
-              strokeWidth="1"
-              fill="none"
-              className="animate-draw-line"
-              style={{ animationDelay: "8s" }}
-            />
-
-            {/* Cross connections for complexity */}
-            <path
-              d="M150,400 Q450,300 750,420"
-              stroke="#F3F4F6"
-              strokeWidth="0.5"
-              fill="none"
-              className="animate-draw-line-slow"
-              style={{ animationDelay: "9s" }}
-            />
-            <path
-              d="M350,450 Q650,350 950,400"
-              stroke="#F3F4F6"
-              strokeWidth="0.5"
-              fill="none"
-              className="animate-draw-line-slow"
-              style={{ animationDelay: "10s" }}
-            />
+            {/* Mandelbrot-inspired recursive patterns */}
+            <g className="animate-mandelbrot-zoom" style={{ transformOrigin: "300px 300px" }}>
+              <circle
+                cx="300"
+                cy="300"
+                r="80"
+                stroke="#E5E7EB"
+                strokeWidth="1"
+                fill="none"
+                className="animate-mandelbrot-circle"
+                style={{ animationDelay: "0s" }}
+              />
+              <circle
+                cx="300"
+                cy="300"
+                r="50"
+                stroke="#D1D5DB"
+                strokeWidth="1"
+                fill="none"
+                className="animate-mandelbrot-circle"
+                style={{ animationDelay: "1s" }}
+              />
+              <circle
+                cx="300"
+                cy="300"
+                r="30"
+                stroke="#B3B8C2"
+                strokeWidth="1"
+                fill="none"
+                className="animate-mandelbrot-circle"
+                style={{ animationDelay: "2s" }}
+              />
+              <circle
+                cx="300"
+                cy="300"
+                r="15"
+                stroke="#9CA3AF"
+                strokeWidth="1"
+                fill="none"
+                className="animate-mandelbrot-circle"
+                style={{ animationDelay: "3s" }}
+              />
+            </g>
           </svg>
         </div>
 

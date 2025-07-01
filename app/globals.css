@@ -68,53 +68,220 @@
   }
 }
 
-/* Line drawing animations inspired by thewayofcode.com */
-@keyframes draw-line {
+/* Fractal and Tesseract Animations */
+
+/* Tesseract (4D cube) animations */
+@keyframes tesseract-rotate {
   0% {
-    stroke-dasharray: 0 1000;
-    stroke-dashoffset: 0;
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  33% {
+    transform: rotateX(15deg) rotateY(45deg) rotateZ(0deg);
+  }
+  66% {
+    transform: rotateX(0deg) rotateY(90deg) rotateZ(15deg);
   }
   100% {
-    stroke-dasharray: 1000 1000;
-    stroke-dashoffset: 0;
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
   }
 }
 
-@keyframes draw-line-slow {
-  0% {
-    stroke-dasharray: 0 1500;
-    stroke-dashoffset: 0;
-  }
-  100% {
-    stroke-dasharray: 1500 1500;
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes pulse-node {
+@keyframes tesseract-edge {
   0%,
   100% {
-    opacity: 0.4;
-    transform: scale(1);
+    stroke-dasharray: 0 400;
+    opacity: 0.3;
   }
   50% {
+    stroke-dasharray: 200 400;
     opacity: 1;
-    transform: scale(1.2);
   }
 }
 
-.animate-draw-line {
-  animation: draw-line 3s ease-in-out infinite;
-  stroke-dasharray: 0 1000;
+@keyframes tesseract-connection {
+  0%,
+  100% {
+    opacity: 0.2;
+    stroke-width: 0.5;
+  }
+  50% {
+    opacity: 0.8;
+    stroke-width: 1.5;
+  }
 }
 
-.animate-draw-line-slow {
-  animation: draw-line-slow 5s ease-in-out infinite;
-  stroke-dasharray: 0 1500;
+/* Fractal tree animations */
+@keyframes fractal-grow {
+  0% {
+    transform: scale(0.8) rotate(-5deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(5deg);
+  }
+  100% {
+    transform: scale(0.8) rotate(-5deg);
+  }
 }
 
-.animate-pulse-node {
-  animation: pulse-node 2s ease-in-out infinite;
+@keyframes fractal-branch {
+  0% {
+    stroke-dasharray: 0 100;
+    opacity: 0.3;
+  }
+  50% {
+    stroke-dasharray: 50 100;
+    opacity: 1;
+  }
+  100% {
+    stroke-dasharray: 100 100;
+    opacity: 0.6;
+  }
+}
+
+/* Sierpinski triangle animations */
+@keyframes fractal-pulse {
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.05) rotate(2deg);
+    opacity: 0.8;
+  }
+}
+
+@keyframes fractal-triangle {
+  0% {
+    stroke-dasharray: 0 300;
+    opacity: 0.2;
+  }
+  50% {
+    stroke-dasharray: 150 300;
+    opacity: 0.8;
+  }
+  100% {
+    stroke-dasharray: 300 300;
+    opacity: 0.4;
+  }
+}
+
+/* Hypercube animations */
+@keyframes hypercube-morph {
+  0% {
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+  }
+  25% {
+    transform: perspective(1000px) rotateX(15deg) rotateY(15deg);
+  }
+  50% {
+    transform: perspective(1000px) rotateX(0deg) rotateY(30deg);
+  }
+  75% {
+    transform: perspective(1000px) rotateX(-15deg) rotateY(15deg);
+  }
+  100% {
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+  }
+}
+
+@keyframes hypercube-face {
+  0%,
+  100% {
+    opacity: 0.3;
+    stroke-width: 1;
+  }
+  50% {
+    opacity: 0.8;
+    stroke-width: 1.5;
+  }
+}
+
+@keyframes hypercube-edge {
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+/* Mandelbrot-inspired animations */
+@keyframes mandelbrot-zoom {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.2) rotate(180deg);
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+  }
+}
+
+@keyframes mandelbrot-circle {
+  0% {
+    stroke-dasharray: 0 500;
+    opacity: 0.2;
+  }
+  50% {
+    stroke-dasharray: 250 500;
+    opacity: 0.8;
+  }
+  100% {
+    stroke-dasharray: 500 500;
+    opacity: 0.3;
+  }
+}
+
+/* Apply animations */
+.animate-tesseract-rotate {
+  animation: tesseract-rotate 20s ease-in-out infinite;
+}
+
+.animate-tesseract-edge {
+  animation: tesseract-edge 4s ease-in-out infinite;
+}
+
+.animate-tesseract-connection {
+  animation: tesseract-connection 3s ease-in-out infinite;
+}
+
+.animate-fractal-grow {
+  animation: fractal-grow 15s ease-in-out infinite;
+}
+
+.animate-fractal-branch {
+  animation: fractal-branch 5s ease-in-out infinite;
+}
+
+.animate-fractal-pulse {
+  animation: fractal-pulse 12s ease-in-out infinite;
+}
+
+.animate-fractal-triangle {
+  animation: fractal-triangle 6s ease-in-out infinite;
+}
+
+.animate-hypercube-morph {
+  animation: hypercube-morph 18s ease-in-out infinite;
+}
+
+.animate-hypercube-face {
+  animation: hypercube-face 4s ease-in-out infinite;
+}
+
+.animate-hypercube-edge {
+  animation: hypercube-edge 3s ease-in-out infinite;
+}
+
+.animate-mandelbrot-zoom {
+  animation: mandelbrot-zoom 25s linear infinite;
+}
+
+.animate-mandelbrot-circle {
+  animation: mandelbrot-circle 8s ease-in-out infinite;
 }
 
 /* Ensure SVG is responsive */
