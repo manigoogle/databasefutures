@@ -59,19 +59,19 @@ const config = {
         brand: {
           backgroundFrom: "#FFFFFF", // Pure white
           backgroundTo: "#FAFAFA", // Very subtle gray
-          // Refined neutral gradient - barely perceptible
-          heroGradientStart: "#FEFEFE", // Almost white with warm undertone
-          heroGradientVia: "#FAFAFA", // Very light gray
-          heroGradientEnd: "#F8F9FA", // Subtle cool gray
-          // Orange accents - used sparingly for highlights
-          orangeAccent: "#FFC107", // Warm orange for links and highlights
-          orangeAccentHover: "#FF9800", // Deeper orange for hover states
-          orangeAccentLight: "#FFF8E1", // Very light orange for subtle backgrounds
+          // Clean grey gradient for hero
+          heroGradientStart: "#F3F4F6", // Light grey
+          heroGradientVia: "#E5E7EB", // Medium grey
+          heroGradientEnd: "#D1D5DB", // Darker grey
+          // Blue accent colors - primary theme color
+          blueAccent: "#3B82F6", // Blue-500
+          blueAccentHover: "#2563EB", // Blue-600
+          blueAccentLight: "#EFF6FF", // Blue-50
           text: "#1E293B", // Dark slate for body text
           heading: "#0F172A", // Almost black for headings
           mutedText: "#64748B", // Medium gray for secondary text
-          accent: "#FFC107", // Orange accent for links
-          accentHover: "#FF9800", // Darker orange for hover
+          accent: "#3B82F6", // Blue accent for links
+          accentHover: "#2563EB", // Darker blue for hover
           border: "#E2E8F0", // Light gray borders
           lightBorder: "#F1F5F9", // Very light borders
         },
