@@ -6,76 +6,282 @@ export default async function HomePage() {
 
   return (
     <>
-      {/* Full-width Hero Section with light grey gradient and geometric animations */}
+      {/* Full-width Hero Section with light grey gradient and line animations */}
       <section
         id="home-hero-banner"
         className="min-h-screen w-full flex flex-col justify-center 
              bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200
              relative overflow-hidden -translate-y-[75px]"
       >
-        {/* Animated Geometric Shapes Background */}
+        {/* Animated Line Network Background */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {/* Floating circles */}
-          <div
-            className="geometric-circle absolute w-32 h-32 rounded-full bg-gradient-to-br from-blue-100/30 to-purple-100/30 animate-float-slow"
-            style={{ top: "10%", left: "10%", animationDelay: "0s" }}
-          ></div>
-          <div
-            className="geometric-circle absolute w-24 h-24 rounded-full bg-gradient-to-br from-green-100/30 to-blue-100/30 animate-float-medium"
-            style={{ top: "20%", right: "15%", animationDelay: "2s" }}
-          ></div>
-          <div
-            className="geometric-circle absolute w-40 h-40 rounded-full bg-gradient-to-br from-purple-100/20 to-pink-100/20 animate-float-slow"
-            style={{ bottom: "15%", left: "20%", animationDelay: "4s" }}
-          ></div>
-
-          {/* Floating squares/rectangles */}
-          <div
-            className="geometric-square absolute w-16 h-16 bg-gradient-to-br from-indigo-100/40 to-blue-100/40 rotate-45 animate-float-fast"
-            style={{ top: "30%", left: "70%", animationDelay: "1s" }}
-          ></div>
-          <div
-            className="geometric-square absolute w-12 h-12 bg-gradient-to-br from-teal-100/40 to-green-100/40 rotate-12 animate-float-medium"
-            style={{ top: "60%", right: "25%", animationDelay: "3s" }}
-          ></div>
-          <div
-            className="geometric-square absolute w-20 h-20 bg-gradient-to-br from-rose-100/30 to-orange-100/30 -rotate-12 animate-float-slow"
-            style={{ bottom: "25%", right: "10%", animationDelay: "5s" }}
-          ></div>
-
-          {/* Hexagons */}
-          <div
-            className="geometric-hex absolute w-28 h-28 animate-float-medium"
-            style={{ top: "50%", left: "5%", animationDelay: "1.5s" }}
+          {/* SVG Line Network */}
+          <svg
+            className="absolute inset-0 w-full h-full"
+            viewBox="0 0 1200 800"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <div
-              className="w-full h-full bg-gradient-to-br from-cyan-100/30 to-blue-100/30 transform rotate-30"
-              style={{ clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)" }}
-            ></div>
-          </div>
-          <div
-            className="geometric-hex absolute w-20 h-20 animate-float-fast"
-            style={{ top: "15%", left: "50%", animationDelay: "3.5s" }}
-          >
-            <div
-              className="w-full h-full bg-gradient-to-br from-violet-100/30 to-purple-100/30 transform -rotate-15"
-              style={{ clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)" }}
-            ></div>
-          </div>
+            {/* Network nodes (dots) */}
+            <circle
+              cx="100"
+              cy="150"
+              r="3"
+              fill="#9CA3AF"
+              className="animate-pulse-node"
+              style={{ animationDelay: "0s" }}
+            />
+            <circle
+              cx="300"
+              cy="100"
+              r="2"
+              fill="#6B7280"
+              className="animate-pulse-node"
+              style={{ animationDelay: "1s" }}
+            />
+            <circle
+              cx="500"
+              cy="200"
+              r="3"
+              fill="#9CA3AF"
+              className="animate-pulse-node"
+              style={{ animationDelay: "2s" }}
+            />
+            <circle
+              cx="700"
+              cy="120"
+              r="2"
+              fill="#6B7280"
+              className="animate-pulse-node"
+              style={{ animationDelay: "3s" }}
+            />
+            <circle
+              cx="900"
+              cy="180"
+              r="3"
+              fill="#9CA3AF"
+              className="animate-pulse-node"
+              style={{ animationDelay: "4s" }}
+            />
+            <circle
+              cx="1100"
+              cy="140"
+              r="2"
+              fill="#6B7280"
+              className="animate-pulse-node"
+              style={{ animationDelay: "5s" }}
+            />
 
-          {/* Lines/Connectors */}
-          <div
-            className="geometric-line absolute w-32 h-0.5 bg-gradient-to-r from-transparent via-gray-300/50 to-transparent animate-pulse-slow"
-            style={{ top: "25%", left: "30%", transform: "rotate(25deg)", animationDelay: "2s" }}
-          ></div>
-          <div
-            className="geometric-line absolute w-24 h-0.5 bg-gradient-to-r from-transparent via-blue-300/40 to-transparent animate-pulse-slow"
-            style={{ bottom: "35%", right: "35%", transform: "rotate(-15deg)", animationDelay: "4s" }}
-          ></div>
-          <div
-            className="geometric-line absolute w-40 h-0.5 bg-gradient-to-r from-transparent via-purple-300/40 to-transparent animate-pulse-slow"
-            style={{ top: "70%", left: "40%", transform: "rotate(45deg)", animationDelay: "6s" }}
-          ></div>
+            <circle
+              cx="150"
+              cy="400"
+              r="2"
+              fill="#6B7280"
+              className="animate-pulse-node"
+              style={{ animationDelay: "1.5s" }}
+            />
+            <circle
+              cx="350"
+              cy="450"
+              r="3"
+              fill="#9CA3AF"
+              className="animate-pulse-node"
+              style={{ animationDelay: "2.5s" }}
+            />
+            <circle
+              cx="550"
+              cy="380"
+              r="2"
+              fill="#6B7280"
+              className="animate-pulse-node"
+              style={{ animationDelay: "3.5s" }}
+            />
+            <circle
+              cx="750"
+              cy="420"
+              r="3"
+              fill="#9CA3AF"
+              className="animate-pulse-node"
+              style={{ animationDelay: "4.5s" }}
+            />
+            <circle
+              cx="950"
+              cy="400"
+              r="2"
+              fill="#6B7280"
+              className="animate-pulse-node"
+              style={{ animationDelay: "5.5s" }}
+            />
+
+            <circle
+              cx="200"
+              cy="650"
+              r="3"
+              fill="#9CA3AF"
+              className="animate-pulse-node"
+              style={{ animationDelay: "0.5s" }}
+            />
+            <circle
+              cx="400"
+              cy="700"
+              r="2"
+              fill="#6B7280"
+              className="animate-pulse-node"
+              style={{ animationDelay: "1.5s" }}
+            />
+            <circle
+              cx="600"
+              cy="620"
+              r="3"
+              fill="#9CA3AF"
+              className="animate-pulse-node"
+              style={{ animationDelay: "2.5s" }}
+            />
+            <circle
+              cx="800"
+              cy="680"
+              r="2"
+              fill="#6B7280"
+              className="animate-pulse-node"
+              style={{ animationDelay: "3.5s" }}
+            />
+            <circle
+              cx="1000"
+              cy="640"
+              r="3"
+              fill="#9CA3AF"
+              className="animate-pulse-node"
+              style={{ animationDelay: "4.5s" }}
+            />
+
+            {/* Connecting lines with draw animation */}
+            <path
+              d="M100,150 Q200,125 300,100"
+              stroke="#D1D5DB"
+              strokeWidth="1"
+              fill="none"
+              className="animate-draw-line"
+              style={{ animationDelay: "0s" }}
+            />
+            <path
+              d="M300,100 Q400,150 500,200"
+              stroke="#D1D5DB"
+              strokeWidth="1"
+              fill="none"
+              className="animate-draw-line"
+              style={{ animationDelay: "1s" }}
+            />
+            <path
+              d="M500,200 Q600,160 700,120"
+              stroke="#D1D5DB"
+              strokeWidth="1"
+              fill="none"
+              className="animate-draw-line"
+              style={{ animationDelay: "2s" }}
+            />
+            <path
+              d="M700,120 Q800,150 900,180"
+              stroke="#D1D5DB"
+              strokeWidth="1"
+              fill="none"
+              className="animate-draw-line"
+              style={{ animationDelay: "3s" }}
+            />
+            <path
+              d="M900,180 Q1000,160 1100,140"
+              stroke="#D1D5DB"
+              strokeWidth="1"
+              fill="none"
+              className="animate-draw-line"
+              style={{ animationDelay: "4s" }}
+            />
+
+            {/* Vertical connections */}
+            <path
+              d="M150,400 Q125,275 100,150"
+              stroke="#E5E7EB"
+              strokeWidth="1"
+              fill="none"
+              className="animate-draw-line"
+              style={{ animationDelay: "1.5s" }}
+            />
+            <path
+              d="M350,450 Q325,275 300,100"
+              stroke="#E5E7EB"
+              strokeWidth="1"
+              fill="none"
+              className="animate-draw-line"
+              style={{ animationDelay: "2.5s" }}
+            />
+            <path
+              d="M550,380 Q525,290 500,200"
+              stroke="#E5E7EB"
+              strokeWidth="1"
+              fill="none"
+              className="animate-draw-line"
+              style={{ animationDelay: "3.5s" }}
+            />
+            <path
+              d="M750,420 Q725,270 700,120"
+              stroke="#E5E7EB"
+              strokeWidth="1"
+              fill="none"
+              className="animate-draw-line"
+              style={{ animationDelay: "4.5s" }}
+            />
+
+            {/* Bottom row connections */}
+            <path
+              d="M200,650 Q300,675 400,700"
+              stroke="#D1D5DB"
+              strokeWidth="1"
+              fill="none"
+              className="animate-draw-line"
+              style={{ animationDelay: "5s" }}
+            />
+            <path
+              d="M400,700 Q500,660 600,620"
+              stroke="#D1D5DB"
+              strokeWidth="1"
+              fill="none"
+              className="animate-draw-line"
+              style={{ animationDelay: "6s" }}
+            />
+            <path
+              d="M600,620 Q700,650 800,680"
+              stroke="#D1D5DB"
+              strokeWidth="1"
+              fill="none"
+              className="animate-draw-line"
+              style={{ animationDelay: "7s" }}
+            />
+            <path
+              d="M800,680 Q900,660 1000,640"
+              stroke="#D1D5DB"
+              strokeWidth="1"
+              fill="none"
+              className="animate-draw-line"
+              style={{ animationDelay: "8s" }}
+            />
+
+            {/* Cross connections for complexity */}
+            <path
+              d="M150,400 Q450,300 750,420"
+              stroke="#F3F4F6"
+              strokeWidth="0.5"
+              fill="none"
+              className="animate-draw-line-slow"
+              style={{ animationDelay: "9s" }}
+            />
+            <path
+              d="M350,450 Q650,350 950,400"
+              stroke="#F3F4F6"
+              strokeWidth="0.5"
+              fill="none"
+              className="animate-draw-line-slow"
+              style={{ animationDelay: "10s" }}
+            />
+          </svg>
         </div>
 
         {/* Inner container for text content, centered */}
