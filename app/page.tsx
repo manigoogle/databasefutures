@@ -6,77 +6,93 @@ export default async function HomePage() {
 
   return (
     <>
-      {/* Full-width Hero Section with dark grey gradient and animated digital bits */}
+      {/* Full-width Hero Section with light grey gradient and geometric animations */}
       <section
         id="home-hero-banner"
         className="min-h-screen w-full flex flex-col justify-center 
-             bg-gradient-to-br from-slate-600 via-slate-700 to-slate-800
+             bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200
              relative overflow-hidden -translate-y-[75px]"
       >
-        {/* Animated Digital Bits Background */}
+        {/* Animated Geometric Shapes Background */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="digital-bit absolute left-[10%] animate-float-bits" style={{ animationDelay: "0s" }}>
-            10110101
+          {/* Floating circles */}
+          <div
+            className="geometric-circle absolute w-32 h-32 rounded-full bg-gradient-to-br from-blue-100/30 to-purple-100/30 animate-float-slow"
+            style={{ top: "10%", left: "10%", animationDelay: "0s" }}
+          ></div>
+          <div
+            className="geometric-circle absolute w-24 h-24 rounded-full bg-gradient-to-br from-green-100/30 to-blue-100/30 animate-float-medium"
+            style={{ top: "20%", right: "15%", animationDelay: "2s" }}
+          ></div>
+          <div
+            className="geometric-circle absolute w-40 h-40 rounded-full bg-gradient-to-br from-purple-100/20 to-pink-100/20 animate-float-slow"
+            style={{ bottom: "15%", left: "20%", animationDelay: "4s" }}
+          ></div>
+
+          {/* Floating squares/rectangles */}
+          <div
+            className="geometric-square absolute w-16 h-16 bg-gradient-to-br from-indigo-100/40 to-blue-100/40 rotate-45 animate-float-fast"
+            style={{ top: "30%", left: "70%", animationDelay: "1s" }}
+          ></div>
+          <div
+            className="geometric-square absolute w-12 h-12 bg-gradient-to-br from-teal-100/40 to-green-100/40 rotate-12 animate-float-medium"
+            style={{ top: "60%", right: "25%", animationDelay: "3s" }}
+          ></div>
+          <div
+            className="geometric-square absolute w-20 h-20 bg-gradient-to-br from-rose-100/30 to-orange-100/30 -rotate-12 animate-float-slow"
+            style={{ bottom: "25%", right: "10%", animationDelay: "5s" }}
+          ></div>
+
+          {/* Hexagons */}
+          <div
+            className="geometric-hex absolute w-28 h-28 animate-float-medium"
+            style={{ top: "50%", left: "5%", animationDelay: "1.5s" }}
+          >
+            <div
+              className="w-full h-full bg-gradient-to-br from-cyan-100/30 to-blue-100/30 transform rotate-30"
+              style={{ clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)" }}
+            ></div>
           </div>
-          <div className="digital-bit absolute left-[20%] animate-float-bits" style={{ animationDelay: "1s" }}>
-            01001110
+          <div
+            className="geometric-hex absolute w-20 h-20 animate-float-fast"
+            style={{ top: "15%", left: "50%", animationDelay: "3.5s" }}
+          >
+            <div
+              className="w-full h-full bg-gradient-to-br from-violet-100/30 to-purple-100/30 transform -rotate-15"
+              style={{ clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)" }}
+            ></div>
           </div>
-          <div className="digital-bit absolute left-[30%] animate-float-bits" style={{ animationDelay: "2s" }}>
-            11010011
-          </div>
-          <div className="digital-bit absolute left-[40%] animate-float-bits" style={{ animationDelay: "3s" }}>
-            00111010
-          </div>
-          <div className="digital-bit absolute left-[50%] animate-float-bits" style={{ animationDelay: "4s" }}>
-            10101100
-          </div>
-          <div className="digital-bit absolute left-[60%] animate-float-bits" style={{ animationDelay: "5s" }}>
-            01110001
-          </div>
-          <div className="digital-bit absolute left-[70%] animate-float-bits" style={{ animationDelay: "6s" }}>
-            11001010
-          </div>
-          <div className="digital-bit absolute left-[80%] animate-float-bits" style={{ animationDelay: "7s" }}>
-            00101101
-          </div>
-          <div className="digital-bit absolute left-[90%] animate-float-bits" style={{ animationDelay: "1.5s" }}>
-            10011100
-          </div>
-          <div className="digital-bit absolute left-[15%] animate-float-bits" style={{ animationDelay: "2.5s" }}>
-            01101011
-          </div>
-          <div className="digital-bit absolute left-[25%] animate-float-bits" style={{ animationDelay: "3.5s" }}>
-            11100110
-          </div>
-          <div className="digital-bit absolute left-[35%] animate-float-bits" style={{ animationDelay: "4.5s" }}>
-            00110101
-          </div>
-          <div className="digital-bit absolute left-[45%] animate-float-bits" style={{ animationDelay: "5.5s" }}>
-            10010111
-          </div>
-          <div className="digital-bit absolute left-[55%] animate-float-bits" style={{ animationDelay: "6.5s" }}>
-            01011001
-          </div>
-          <div className="digital-bit absolute left-[65%] animate-float-bits" style={{ animationDelay: "0.5s" }}>
-            11101010
-          </div>
+
+          {/* Lines/Connectors */}
+          <div
+            className="geometric-line absolute w-32 h-0.5 bg-gradient-to-r from-transparent via-gray-300/50 to-transparent animate-pulse-slow"
+            style={{ top: "25%", left: "30%", transform: "rotate(25deg)", animationDelay: "2s" }}
+          ></div>
+          <div
+            className="geometric-line absolute w-24 h-0.5 bg-gradient-to-r from-transparent via-blue-300/40 to-transparent animate-pulse-slow"
+            style={{ bottom: "35%", right: "35%", transform: "rotate(-15deg)", animationDelay: "4s" }}
+          ></div>
+          <div
+            className="geometric-line absolute w-40 h-0.5 bg-gradient-to-r from-transparent via-purple-300/40 to-transparent animate-pulse-slow"
+            style={{ top: "70%", left: "40%", transform: "rotate(45deg)", animationDelay: "6s" }}
+          ></div>
         </div>
 
         {/* Inner container for text content, centered */}
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center mt-[-35px] md:mt-[-35px] relative z-10">
-          <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-10 md:mb-12 balance-text">
+          <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold text-gray-800 mb-10 md:mb-12 balance-text">
             Cloud Tech I Thought I Understood
           </h1>
           <div className="max-w-2xl mx-auto text-center">
-            <p className="font-sans text-base md:text-lg text-slate-200 mb-2">
+            <p className="font-sans text-base md:text-lg text-gray-700 mb-2">
               <span className="text-2xl mr-2 align-middle">📝</span>
-              <strong className="font-semibold text-white align-middle">Why I write this:</strong>
+              <strong className="font-semibold text-gray-800 align-middle">Why I write this:</strong>
             </p>
-            <p className="font-sans text-base md:text-lg text-slate-200 leading-relaxed mb-4">
+            <p className="font-sans text-base md:text-lg text-gray-700 leading-relaxed mb-4">
               Every Friday, I share what I've been learning about cloud—especially databases. Writing helps me think
               more clearly, and sharing it is my way of helping us all learn a little more, together.
             </p>
-            <p className="font-sans text-sm md:text-base text-slate-300">— Mani HK</p>
+            <p className="font-sans text-sm md:text-base text-gray-600">— Mani HK</p>
           </div>
         </div>
       </section>
