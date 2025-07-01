@@ -11,6 +11,34 @@
   .copy-instructions h2 { margin-top: 0; color: #333; }
   .copy-instructions p { color: #666; line-height: 1.5; }
   .email-banner { border: 2px dashed #ccc; }
+  
+  /* Animation for digital bits */
+  @keyframes float-bits {
+    0% { transform: translateY(100px) translateX(-20px); opacity: 0; }
+    10% { opacity: 0.3; }
+    90% { opacity: 0.3; }
+    100% { transform: translateY(-100px) translateX(20px); opacity: 0; }
+  }
+  
+  .digital-bit {
+    position: absolute;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.15);
+    animation: float-bits 8s linear infinite;
+    pointer-events: none;
+  }
+  
+  .digital-bit:nth-child(1) { left: 10%; animation-delay: 0s; }
+  .digital-bit:nth-child(2) { left: 20%; animation-delay: 1s; }
+  .digital-bit:nth-child(3) { left: 30%; animation-delay: 2s; }
+  .digital-bit:nth-child(4) { left: 40%; animation-delay: 3s; }
+  .digital-bit:nth-child(5) { left: 50%; animation-delay: 4s; }
+  .digital-bit:nth-child(6) { left: 60%; animation-delay: 5s; }
+  .digital-bit:nth-child(7) { left: 70%; animation-delay: 6s; }
+  .digital-bit:nth-child(8) { left: 80%; animation-delay: 7s; }
+  .digital-bit:nth-child(9) { left: 90%; animation-delay: 1.5s; }
+  .digital-bit:nth-child(10) { left: 15%; animation-delay: 2.5s; }
 </style>
 </head>
 <body>
@@ -18,36 +46,50 @@
 <div class="preview-container">
   <div class="copy-instructions">
     <h2>📧 Email Hero Banner - Ready to Copy</h2>
-    <p><strong>Instructions:</strong> Copy the HTML code below (everything inside the dashed border) and paste it into your email newsletter body. This banner uses a refined neutral gradient with full-width content and proper margins.</p>
-    <p><strong>Note:</strong> The subtle gradient background will fall back to white in email clients that don't support gradients.</p>
+    <p><strong>Instructions:</strong> Copy the HTML code below (everything inside the dashed border) and paste it into your email newsletter body. This banner features a dynamic dark grey background with animated digital bits representing data transfer.</p>
+    <p><strong>Note:</strong> The animations will work in modern email clients that support CSS animations. In other clients, it will show a clean dark grey gradient background.</p>
   </div>
 
   <!-- START: EMAIL BANNER CODE (Copy everything from here...) -->
   <div class="email-banner">
-    <table width="100%" border="0" cellpadding="0" cellspacing="0" style="width: 100%; max-width: 100%; margin: 0 auto; background-color: #FEFEFE; background-image: linear-gradient(135deg, #FEFEFE 0%, #FAFAFA 50%, #F8F9FA 100%); font-family: Arial, Helvetica, Verdana, sans-serif;">
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" style="width: 100%; max-width: 100%; margin: 0 auto; background-color: #4A5568; background-image: linear-gradient(135deg, #4A5568 0%, #2D3748 50%, #1A202C 100%); font-family: Arial, Helvetica, Verdana, sans-serif; position: relative; overflow: hidden;">
       <tr>
-        <td style="padding: 60px 8% 60px 8%; text-align: center;">
+        <td style="padding: 60px 8% 60px 8%; text-align: center; position: relative;">
+          
+          <!-- Animated Digital Bits Background -->
+          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; pointer-events: none;">
+            <div class="digital-bit" style="position: absolute; left: 10%; font-family: 'Courier New', monospace; font-size: 14px; color: rgba(255, 255, 255, 0.15); animation: float-bits 8s linear infinite; animation-delay: 0s;">10110101</div>
+            <div class="digital-bit" style="position: absolute; left: 20%; font-family: 'Courier New', monospace; font-size: 14px; color: rgba(255, 255, 255, 0.15); animation: float-bits 8s linear infinite; animation-delay: 1s;">01001110</div>
+            <div class="digital-bit" style="position: absolute; left: 30%; font-family: 'Courier New', monospace; font-size: 14px; color: rgba(255, 255, 255, 0.15); animation: float-bits 8s linear infinite; animation-delay: 2s;">11010011</div>
+            <div class="digital-bit" style="position: absolute; left: 40%; font-family: 'Courier New', monospace; font-size: 14px; color: rgba(255, 255, 255, 0.15); animation: float-bits 8s linear infinite; animation-delay: 3s;">00111010</div>
+            <div class="digital-bit" style="position: absolute; left: 50%; font-family: 'Courier New', monospace; font-size: 14px; color: rgba(255, 255, 255, 0.15); animation: float-bits 8s linear infinite; animation-delay: 4s;">10101100</div>
+            <div class="digital-bit" style="position: absolute; left: 60%; font-family: 'Courier New', monospace; font-size: 14px; color: rgba(255, 255, 255, 0.15); animation: float-bits 8s linear infinite; animation-delay: 5s;">01110001</div>
+            <div class="digital-bit" style="position: absolute; left: 70%; font-family: 'Courier New', monospace; font-size: 14px; color: rgba(255, 255, 255, 0.15); animation: float-bits 8s linear infinite; animation-delay: 6s;">11001010</div>
+            <div class="digital-bit" style="position: absolute; left: 80%; font-family: 'Courier New', monospace; font-size: 14px; color: rgba(255, 255, 255, 0.15); animation: float-bits 8s linear infinite; animation-delay: 7s;">00101101</div>
+            <div class="digital-bit" style="position: absolute; left: 90%; font-family: 'Courier New', monospace; font-size: 14px; color: rgba(255, 255, 255, 0.15); animation: float-bits 8s linear infinite; animation-delay: 1.5s;">10011100</div>
+            <div class="digital-bit" style="position: absolute; left: 15%; font-family: 'Courier New', monospace; font-size: 14px; color: rgba(255, 255, 255, 0.15); animation: float-bits 8s linear infinite; animation-delay: 2.5s;">01101011</div>
+          </div>
           
           <!-- Title -->
-          <h1 style="margin: 0 0 40px 0; font-family: Georgia, 'Times New Roman', Times, serif; font-size: 36px; font-weight: bold; color: #0F172A; text-align: center; line-height: 1.2; max-width: 700px; margin-left: auto; margin-right: auto; margin-bottom: 40px;">
+          <h1 style="margin: 0 0 40px 0; font-family: Georgia, 'Times New Roman', Times, serif; font-size: 36px; font-weight: bold; color: #FFFFFF; text-align: center; line-height: 1.2; max-width: 700px; margin-left: auto; margin-right: auto; margin-bottom: 40px; position: relative; z-index: 2;">
             Cloud Tech I Thought I Understood
           </h1>
 
           <!-- Content Container - Now wider with better margins -->
-          <div style="max-width: 650px; margin: 0 auto; text-align: center; padding: 0 20px;">
+          <div style="max-width: 650px; margin: 0 auto; text-align: center; padding: 0 20px; position: relative; z-index: 2;">
             
             <!-- Why I write this header -->
-            <p style="margin: 0 0 12px 0; font-size: 16px; color: #1E293B; line-height: 1.5;">
-              <span style="font-size: 22px; margin-right: 8px; vertical-align: middle;">📝</span><strong style="font-weight: 600; color: #0F172A; vertical-align: middle;">Why I write this:</strong>
+            <p style="margin: 0 0 12px 0; font-size: 16px; color: #E2E8F0; line-height: 1.5;">
+              <span style="font-size: 22px; margin-right: 8px; vertical-align: middle;">📝</span><strong style="font-weight: 600; color: #FFFFFF; vertical-align: middle;">Why I write this:</strong>
             </p>
             
             <!-- Main content -->
-            <p style="margin: 0 0 24px 0; font-size: 16px; color: #1E293B; line-height: 1.6; text-align: center;">
+            <p style="margin: 0 0 24px 0; font-size: 16px; color: #E2E8F0; line-height: 1.6; text-align: center;">
               Every Friday, I share what I've been learning about cloud—especially databases. Writing helps me think more clearly, and sharing it helps us all learn a little more, together. It only gets better when you chime in—so don't hold back. I'd love to hear your take.
             </p>
             
             <!-- Author signature -->
-            <p style="margin: 0; font-size: 14px; color: #64748B; text-align: center; line-height: 1.5;">
+            <p style="margin: 0; font-size: 14px; color: #CBD5E0; text-align: center; line-height: 1.5;">
               — Mani HK
             </p>
             
@@ -60,6 +102,15 @@
   <!-- END: EMAIL BANNER CODE (...to here) -->
 
 </div>
+
+<style>
+@keyframes float-bits {
+  0% { transform: translateY(100px) translateX(-20px); opacity: 0; }
+  10% { opacity: 0.3; }
+  90% { opacity: 0.3; }
+  100% { transform: translateY(-100px) translateX(20px); opacity: 0; }
+}
+</style>
 
 </body>
 </html>
